@@ -1,17 +1,11 @@
 pipeline {
     agent any
 
-    /*
-      Tools configuration (Optional):
-      If Maven and JDK are configured under "Manage Jenkins" -> "Tools",
-      you can uncomment this section to automatically use them:
-    */
-    /*
     tools {
+        // Tells Jenkins to use the Maven tool configured in:
+        // Manage Jenkins -> Tools -> Maven installations -> Name: Maven3
         maven 'Maven3'
-        jdk 'JDK17'
     }
-    */
 
     stages {
         stage('Checkout') {
