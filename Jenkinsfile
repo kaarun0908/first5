@@ -2,9 +2,7 @@ pipeline {
     agent any
 
     tools {
-        // Tells Jenkins to use the Maven tool configured in:
-        // Manage Jenkins -> Tools -> Maven installations -> Name: Maven3
-        maven 'Maven3'
+        maven 'Maven-3.9.16'
     }
 
     stages {
