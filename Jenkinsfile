@@ -61,6 +61,19 @@ pipeline {
                 }
             }
         }
+
+        stage('Execute Application') {
+            steps {
+                echo 'Running all 5 Java programs and printing output:'
+                script {
+                    if (isUnix()) {
+                        sh 'java -jar target/first5-1.0-SNAPSHOT.jar'
+                    } else {
+                        bat 'java -jar target/first5-1.0-SNAPSHOT.jar'
+                    }
+                }
+            }
+        }
     }
 
     post {
